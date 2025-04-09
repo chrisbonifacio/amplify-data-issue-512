@@ -12,7 +12,7 @@ specifies that any unauthenticated user can "create", "read", "update",
 and "delete" any "Todo" records.
 =========================================================================*/
 
-const preSignUp = defineFunction({
+export const preSignUp = defineFunction({
   name: "preSignUp",
   entry: "create-user/handler.ts",
 });
@@ -58,6 +58,7 @@ const schema = a
 export type Schema = ClientSchema<typeof schema>;
 
 export const data = defineData({
+  name: "amplifyDataIssue512",
   schema,
   authorizationModes: {
     defaultAuthorizationMode: "iam",
@@ -69,7 +70,7 @@ Go to your frontend source code. From your client-side code, generate a
 Data client to make CRUDL requests to your table. (THIS SNIPPET WILL ONLY
 WORK IN THE FRONTEND CODE FILE.)
 
-Using JavaScript or Next.js React Server Components, Middleware, Server 
+Using JavaScript or Next.js React Server Components, Middleware, Server
 Actions or Pages Router? Review how to generate Data clients for those use
 cases: https://docs.amplify.aws/gen2/build-a-backend/data/connect-to-API/
 =========================================================================*/
