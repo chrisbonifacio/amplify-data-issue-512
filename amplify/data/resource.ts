@@ -13,7 +13,7 @@ and "delete" any "Todo" records.
 =========================================================================*/
 
 const preSignUp = defineFunction({
-  name: "preSignUpLambda",
+  name: "preSignUp",
   entry: "create-user/handler.ts",
 });
 
